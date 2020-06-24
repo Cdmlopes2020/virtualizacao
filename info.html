@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mamaltar de vale de fachas</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="js/aframe_extras.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+        <script src="js/main.js"></script>
+        <style type="text/css"></style>
+
+
+
+    </head>
+    <body class="a-body">
+        <a-scene background="color:#5f5f5f" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" shadow="autoUpdate: true; type:pcfsoft" device-orientation-permission-ui="">
+
+            <a-assets>
+                <img id="sky" src="img/autumn_park.jpg">
+
+            </a-assets>
+
+            <a-sky src="#sky" material="" geometry="" position="0 -10 0" rotation="0 90 0" scale=""></a-sky>
+
+            <a-assets>
+                <img id="info" src="img/info.png">
+                <a-asset-item id="plano"  src="modelos/plano3.glb"></a-asset-item>
+                <a-asset-item id="hand" src="modelos/mao.glb"></a-asset-item>
+                <a-asset-item id="hande" src="modelos/maoe.glb"></a-asset-item>
+                <a-asset-item id="tree" src="modelos/arvore1.glb"></a-asset-item>
+                <a-asset-item id="tree2" src="modelos/arvore.glb"></a-asset-item>
+                <a-asset-item id="bush" src="modelos/bush.glb"></a-asset-item>
+                <a-asset-item id="peca" src="modelos/17.glb"></a-asset-item>
+                <a-asset-item id="peca1" src="modelos/18.glb"></a-asset-item>
+                <a-asset-item id="peca2" src="modelos/vasopequeno.glb"></a-asset-item>
+                <a-asset-item id="placa" src="modelos/placa.glb"></a-asset-item>
+                <a-asset-item id="mamoa" src="modelos/mamoa.glb"></a-asset-item>
+                <a-asset-item id="placard" src="modelos/placard.glb"></a-asset-item>
+                <a-asset-item id="base" src="modelos/base.glb"></a-asset-item>
+                <img id="title" src="img/title.png" >
+                <img id="info" src="img/info.png" >
+
+
+            </a-assets>
+
+            <!-- plano --->
+            <a-entity  gltf-model="#plano"    shadow="cast:  false"  scale="2 2 2" position="16 -3 0" rotation="0 0 0" ></a-entity>
+
+
+            <!--ARVORES1 -->
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="10 10 10" position="23.4 1.6 15.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="9 9 9" position="33.4 1.6 -22.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="52.4 1.6 -16.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="4.7 1.6 -25.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="39 1.6 -4.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="53 1.6 21" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="30 1.6 36" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="-5 1.6 42" rotation="0 33 0"></a-entity>
+
+              <a-entity  gltf-model="#base"    shadow="receive: true" scale="1.8 1.8 1.8" position="11.52 -1.75 -8.41894" rotation=""></a-entity>
+              <a-entity  gltf-model="#base"    shadow="receive: true" scale="1.8 1.8 1.8" position="6 -1.75 -8.41894" rotation=""></a-entity>
+              <a-entity  gltf-model="#base"    shadow="receive: true" scale="1.8 1.8 1.8" position="6 -1.75 -1" rotation=""></a-entity>
+
+
+-
+            <!--PECA -->
+            <a-entity gltf-model="#peca" shadow="receive: true" scale="1.5 1.5 1.5" position="11.59814 0.28674 -8.23441" rotation="36.4 61.5 47.6"
+
+                      animation__mouseenter="property: position; to: 11.59814 0.58674 -8.23441; dur: 100; startEvents: mouseenter"
+                      animation__mouseenter1="property: scale; to: 2.2 2.2 2.2; dur: 100; startEvents: mouseenter"
+                      animation__mouseenter2="property: rotation; to: 0 0 0; dur: 100; startEvents: mouseenter"
+
+                      animation__mouseleave="property: position; to: 11.59814  0.28674 -8.23441; dur: 100; startEvents: mouseenter"
+                      animation__mouseleave1="property: scale; to: 1.5 1.5 1.5 ; dur: 100; startEvents: mouseleave"
+                      animation__mouseleave2="property: rotation; to: 36.4 61.5 47.6 ; dur: 100; startEvents: mouseleave"
+
+                      ></a-entity>
+
+
+                      <a-entity gltf-model="#peca1" shadow="receive: true" scale="1.8 1.8 1.8" position="6 0.28674 -8.23441" rotation="36.4 61.5 47.6"
+
+                                animation__mouseenter="property: position; to: 6 0.58674 -8.23441; dur: 100; startEvents: mouseenter"
+                                animation__mouseenter1="property: scale; to: 2.2 2.2 2.2; dur: 100; startEvents: mouseenter"
+                                animation__mouseenter2="property: rotation; to: 0 0 0; dur: 100; startEvents: mouseenter"
+
+                                animation__mouseleave="property: position; to: 6  0.28674 -8.23441; dur: 100; startEvents: mouseleave"
+                                animation__mouseleave1="property: scale; to: 1.5 1.5 1.5 ; dur: 100; startEvents: mouseleave"
+                                animation__mouseleave2="property: rotation; to: 36.4 61.5 47.6 ; dur: 100; startEvents: mouseleave"
+
+                                ></a-entity>
+
+
+                                <a-entity gltf-model="#peca2" shadow="receive: true" scale="3 3 3" position="5.8 0.42 -0.96" rotation="-45.81 55.33 47.6"
+
+
+                                          animation__mouseenter1="property: scale; to: 4 4 4; dur: 100; startEvents: mouseenter"
+                                          animation__mouseenter2="property: rotation; to: -45.81 -65.33 47.6; dur: 100; startEvents: mouseenter"
+
+
+                                          animation__mouseleave2="property: rotation; to: -45.81 55.33 47.6; dur: 100; startEvents: mouseleave"
+                                          animation__mouseleave1="property: scale; to: 3 3 3 ; dur: 100; startEvents: mouseleave"
+
+
+                                          ></a-entity>
+
+
+
+
+            <!-- luzes --->
+            <a-entity light="intensity:  2.5;  type:  ambient;  castShadow:  true;  shadowBias:  91.56;  shadowRadius:  294.67" ></a-entity>
+            <a-entity light="intensity:  2.39;  castShadow:  true;  color:  #ffffff;  groundColor:  #ffffff;  decay:  0.82;  shadowCameraFar:  499.97;  shadowCameraFov:  89.19;  shadowCameraNear:  1.29;  shadowCameraTop:  -0.04;  shadowCameraRight:  23.98;  shadowCameraBottom:  -19.13;  shadowCameraLeft:  -10.01;  shadowMapHeight:  512.11;  shadowMapWidth:  512.37;  shadowRadius:  1.33" position="25.19 18.92 -5.028" ></a-entity>
+
+
+ <!-- INTERFACE -->
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  0.03;" scale = "0.1 0.1 0.1 "  rotation="0 -90 0" value="CIMA" move-camera="position: 0 0.01 0;" align="center">
+  <a-plane
+  material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]"></a-plane>
+</a-text>
+
+
+
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  -0.07;"  scale = "0.1 0.1 0.1 " text="  color:  #0fb842" rotation="0 -90 0" value="BAIXO" move-camera="position: 0 -0.01 0;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]"></a-plane>
+</a-text>
+
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  0.13;"  scale = "0.1 0.1 0.1 " text="  color:  #0fb842" rotation="0 -90 0" value="FRENTE" move-camera="position: 0.01 0 0;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]"></a-plane>
+</a-text>
+
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  0.23;"  scale = "0.1 0.1 0.1 "  rotation="0 -90 0" value="TRAS" move-camera="position: -0.01 0 0;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]"></a-plane>
+</a-text>
+
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  -0.17;"  scale = "0.1 0.1 0.1 " rotation="0 -90 0" value="DIREITA" move-camera="position: 0 0 0.01;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]"></a-plane>
+</a-text>
+
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  -0.28;" text="  color:  #0fb842" scale = "0.1 0.1 0.1 " rotation="0 -90 0" value="ESQUERDA" move-camera="position: 0 0 -0.01;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]" scale="1.2 1 1.2"></a-plane>
+</a-text>
+<a-text class="sign" highlight follow-camera="offset: 1 0.7  -0.48;" text="  color:  #0fb842" scale = "0.1 0.1 0.1 " rotation="0 -90 0" value="MAMALTAR" link="href: final.html;" align="center">
+<a-plane
+material="color:  #000;  offset:  [object Object];  opacity:  0.27;  repeat:  [object Object];  ambientOcclusionTextureOffset:  [object Object];  ambientOcclusionTextureRepeat:  [object Object];  displacementTextureOffset:  [object Object];  displacementTextureRepeat:  [object Object];  metalnessTextureOffset:  [object Object];  metalnessTextureRepeat:  [object Object];  normalScale:  [object Object];  normalTextureOffset:  [object Object];  normalTextureRepeat:  [object Object];  roughnessTextureOffset:  [object Object];  roughnessTextureRepeat:  [object Object]" scale="1.2 1 1.2"></a-plane>
+</a-text>
+
+
+            <!-- camara     --->
+            <a-entity position="0 0 0"  >
+                <a-camera camera="fov:  70"    wasd-controls="acceleration: 400"   >
+                    <!-- Visão humana 46º ( indicação professor Zé)  -->
+
+                    <!-- CURSOR -->
+                    <a-entity cursor="fuse: true; fuseTimeout: 500"
+                              position="0 0 -0.3"
+                              geometry="primitive:  circle;  buffer:  false;  radius:  0.002"
+                              material="color:  #3cdbbb;  shader:  flat;  offset:  [object Object];  repeat:  [object Object];  vertexColors:  vertex;  wireframeLinewidth:    4.36">
+                    </a-entity>
+
+
+
+
+
+                </a-camera>
+
+
+
+            </a-entity>
+
+
+
+        </a-scene>
+
+
+
+        <script>
+
+            AFRAME.registerComponent('cursor-listener', {
+                init: function () {
+                    var lastIndex = -1;
+                    var COLORS = ['red', 'green', 'blue'];
+                    this.el.addEventListener('click', function (evt) {
+                        lastIndex = (lastIndex + 1) % COLORS.length;
+                        this.setAttribute('material', 'color', COLORS[lastIndex]);
+                        console.log('I was clicked at: ', evt.detail.intersection.point);
+                    });
+                }
+            });
+
+
+
+            AFRAME.registerComponent('alpha-test', {
+                dependencies: ['material'],
+                init: function () {
+                    this.el.getObject3D('tree').material.alphaTest = 0.1;
+                }
+            });
+
+
+
+
+        </script>
+
+
+
+    </body></html>
