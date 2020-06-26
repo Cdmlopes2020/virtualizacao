@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mamaltar de vale de fachas</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script><!--aframebase--> 
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script> <!--aframeextras-->
+        <script src="js/main.js"> </script>
+       
+
+        
+        <style> 
+
+            .show{visibility: visible; }
+
+        </style>
+    </head>
+    <body> 
+
+
+
+        <!-- ASSETS-->
+        <img id="sky" src="img/autumn_park.jpg">
+        <img id="centro" src="img/centro.png">
+        <img id="mamoa" src="img/mamoa.png">
+        <img id="teste" src="img/teste.png">
+        <a-asset-item id="plano"  src="modelos/plano.glb"></a-asset-item>
+        <a-asset-item id="navmesh" src="nav1.glb"></a-asset-item>
+        <a-asset-item id="anta" src="modelos/anta.glb"></a-asset-item>
+        <a-asset-item id="tree" src="modelos/arvore1.glb"></a-asset-item>
+        <a-asset-item id="tree2" src="modelos/arvore.glb"></a-asset-item>
+        <a-asset-item id="mamoa" src="modelos/mamoa.glb"></a-asset-item>
+        <a-asset-item id="bush" src="modelos/bush.glb"></a-asset-item>
+        <a-asset-item id="pedra" src="modelos/pedra.glb"></a-asset-item>
+        <a-asset-item id="placa" src="modelos/placa.glb"></a-asset-item>
+
+
+        <!-- FIM  ASSETS-->   
+
+        <a-scene  background="color: lightblue;">
+            
+
+            <!-- CAMERA -->
+            <a-entity id="rig" movement-controls="constrainToNavMesh: true;">
+                <a-entity camera look-controls="pointerLockEnabled: true;" position="0 2.3 0">
+
+
+                    <a-entity cursor="fuse: true; fuseTimeout: 500"
+                              position="0 0 -0.3"
+                              geometry="primitive:  circle;  buffer:  false;  radius:  0.002"
+                              material="color:  #3cdbbb;  shader:  flat;  offset:  [object Object];  repeat:  [object Object];  vertexColors:  vertex;  wireframeLinewidth:    4.36">
+                    </a-entity>
+
+
+                </a-entity>
+            </a-entity>
+
+            <!-- CHAMAR ASSETS -->
+            <a-entity gltf-model="nav1.glb" geometry="" shadow="cast: false" scale="2 2 2" position="16 -1 0" rotation="0 0 0" nav-mesh="" material="opacity: 1"></a-entity>
+            <a-entity  gltf-model="#plano"    shadow="cast:  false"  scale="2 2 2" position="16 0 0" rotation="0 0 0" ></a-entity>
+            
+            
+            <a-entity id="mamoa" gltf-model="modelos/mamoa.glb" shadow="cast: false" scale="0 0 0" position="16 -1 0" rotation="">
+                
+        
+            
+            
+            </a-entity>
+            <a-entity  gltf-model="#anta"     shadow="receive:  false"  scale="2 2 2" position="16 0 0" rotation="0 0 0"></a-entity>
+            <a-sky src="#sky" material="" geometry="" position="0 -10 0" rotation="0 90 0" scale=""></a-sky>
+            <!--ARVORES1 -->
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="10 10 10" position="23.4 5.6 15.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="9 9 9" position="33.4 5.6 -22.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="52.4 5.6 -16.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="4.7 5.6 -25.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="39 5.6 -4.9" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="53 5.6 21" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="30 5.6 36" rotation="0 33 0"></a-entity>
+            <a-entity  gltf-model="#tree"     shadow="cast: false"  scale="14 14 14" position="-5 5.6 42" rotation="0 33 0"></a-entity>
+            <!--ARVORES2 -->
+            <a-entity  gltf-model="#tree2"     shadow="cast: false"  scale="10 10 10" position="12.4 5.4 -10.9" rotation="0 45 0"></a-entity>
+            <a-entity  gltf-model="#tree2"     shadow="cast: false"  scale="10 10 10" position="14 5.4 -40.9" rotation="0 45 0"></a-entity>
+            <a-entity  gltf-model="#tree2"     shadow="cast: false"  scale="8 8 8" position="39 3.4 -35.9" rotation="0 45 0"></a-entity>
+            <a-entity  gltf-model="#tree2"     shadow="cast: false"  scale="8 8 8" position="-16 3.4 0" rotation="0 45 0"></a-entity>
+
+            <!--bush-->
+
+            <a-entity  gltf-model="#bush"     shadow="cast:false" scale="" position="10.25091 1.34562 1.9025" rotation="-10.840934441670306 142.27172306672983 -9.481305593824862"></a-entity>
+            <a-entity gltf-model="#bush" shadow="" scale="0.69 0.84 0.73" position="10.25091 1.2758 2.667" rotation="-10.840934441670306 142.27172306672983 -9.481305593824862"></a-entity>
+            <a-entity gltf-model="#bush" shadow="cast: false" scale="" position="7.80736 1.31984 5.42952" rotation="-10.840934441670308 142.27172306672983 -9.481305593824862"></a-entity>
+
+            <a-entity gltf-model="#bush" shadow="cast: false" scale="" position="9.05894 1.27877 -2.81422" rotation="-10.840934441670308 142.27172306672983 -9.481305593824862"></a-entity>
+            <a-entity gltf-model="#bush" shadow="cast: false" scale="" position="18.56736 2.31124 -2.81422" rotation="-10.840934441670308 142.27172306672983 -9.481305593824862"></a-entity>
+
+            <a-entity gltf-model="#bush" shadow="cast: false" scale="" position="9.31798 1.26021 0.21664" rotation="-10.840934441670308 142.27172306672983 -9.481305593824862"></a-entity>
+            <!-- CHAMAR ASSETS -->
+            <!-- placa-->
+           
+            <!-- Pedras-->
+
+            <a-entity  gltf-model="#pedra" shadow="" scale="0.5 0.5 0.5" position="11.90761 1.30802 0.75423" rotation="0.7121865393476132 148.167458778626 -0.44232341784099555"></a-entity>
+            <a-entity gltf-model="#pedra" shadow="" scale="0.5 0.5 0.5" position="16.85249 1.70394 0.97686" rotation="0.7121865393476132 148.167458778626 -0.44232341784099555"></a-entity>
+            <a-entity gltf-model="#pedra" shadow="" scale="0.86 0.62 1.38" position="19.04201 1.46848 -4.84107" rotation="0.7121865393476132 148.167458778626 -0.44232341784099555"></a-entity>
+            <a-entity gltf-model="#pedra" shadow="" scale="1.09 0.85 1.38" position="6.08033 1.0041 -17.2593" rotation="0.7121865393476132 148.167458778626 -0.44232341784099555"></a-entity>
+
+            <a-entity gltf-model="#pedra" shadow="receive: false" scale="0.34203 0.50692 0.50274" position="16 1.44698 -2.92483" ></a-entity>
+
+            <!-- luzes --->
+            <a-entity light="intensity:  2.80;  type:  ambient;  castShadow:  true;  shadowBias:  91.56;  shadowRadius:  294.67" ></a-entity>
+            <a-entity light="intensity:  1.7;  castShadow:  true;  color:  #ffffff;  groundColor:  #ffffff;  decay:  0.82;  shadowCameraFar:  499.97;  shadowCameraFov:  89.19;  shadowCameraNear:  1.29;  shadowCameraTop:  -0.04;  shadowCameraRight:  23.98;  shadowCameraBottom:  -19.13;  shadowCameraLeft:  -10.01;  shadowMapHeight:  512.11;  shadowMapWidth:  512.37;  shadowRadius:  1.33" position="25.19 18.92 -5.028" ></a-entity>
+            
+            
+            
+            
+            
+            
+            
+            <a-image src="#teste" position="-8.22303 4.89995 -7.55848" rotation="0 50 0 " scale="8 2 2" 
+                     animation__mouseenter="property: scale; to: 10.8 2.8 2.8; dur: 500; startEvents: mouseenter" 
+                      animation__mouseleave="property: scale; to: 8 2 2; dur: 500; startEvents: mouseleave"
+                     ></a-image>
+            
+            <a-entity text="value: Mamaltar; align: center; color: #57ffc7; height: -0.24; letterSpacing: 3.5; lineHeight: 50.5; tabSize: 4.79; yOffset: 0.03; alphaTest: 0.71; width: 3.15" position="-8.22303 6.89995 -7.55848" scale="6 6 6" rotation="0 50 0" > 
+            
+            
+            <a-plane material="opacity: 0.57; color: #0d0d0d; height: 255.82" geometry="height: 0.21"> </a-plane>
+
+            </a-entity>
+
+            
+            
+          <a-entity text="value: CETRO INTERPRETATIVO; align: center; color: #57ffc7; height: -0.24; letterSpacing: 3.5; lineHeight: 50.5; tabSize: 4.79; yOffset: 0.03; alphaTest: 0.71; width: 3.15" position="8.695 2.8 -5.89085" scale="1.5 1.5 1.5" rotation="0 -52.09905231124576 0" 
+                    link="href:info.html" 
+                    
+                    animation__mouseenter="property: scale; to: 3.5 2.5 2.5; dur: 500; startEvents: mouseenter" 
+                    animation__mouseleave="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseleave" > 
+            <a-plane material="opacity: 0.57; color: #0d0d0d; height: 255.82" geometry="height: 0.29; width: 1.85"> </a-plane>
+
+            </a-entity>
+            
+            <a-entity text="value: MAMOA; align: center; color: #57ffc7; height: -0.24; letterSpacing: 3.5; lineHeight: 50.5; tabSize: 4.79; yOffset: 0.03; alphaTest: 0.71; width: 3.15" position="8.695 2.2 -5.89085" scale="1.5 1.5 1.5" rotation="0 -52.09905231124576 0" 
+                    link="href:mamoa.html" 
+                    
+                    animation__mouseenter="property: scale; to: 3.5 2.5 2.5; dur: 500; startEvents: mouseenter" 
+                    animation__mouseleave="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseleave"> 
+                
+            <a-plane material="opacity: 0.57; color: #0d0d0d; height: 255.82" geometry="height: 0.29; width: 1.3"> </a-plane>
+
+            </a-entity>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </a-scene>
+
+
+
+        <script>
+
+            AFRAME.registerComponent('cursor-listener', {
+                init: function () {
+                    var lastIndex = -1;
+                    var COLORS = ['red', 'green', 'blue'];
+                    this.el.addEventListener('click', function (evt) {
+                        lastIndex = (lastIndex + 1) % COLORS.length;
+                        this.setAttribute('material', 'color', COLORS[lastIndex]);
+                        console.log('I was clicked at: ', evt.detail.intersection.point);
+                    });
+                }
+            });
+
+
+
+            AFRAME.registerComponent('alpha-test', {
+                dependencies: ['material'],
+                init: function () {
+                    this.el.getObject3D('tree').material.alphaTest = 0.1;
+                }
+            });
+
+   
+
+        </script>
+
+
+    </body>
+</html>
