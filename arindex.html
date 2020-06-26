@@ -1,6 +1,6 @@
 <!doctype HTML>
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
     
@@ -14,13 +14,13 @@
 -->
 
           <a-assets>
-            <a-asset-item id="peca17" src="armodels/17_shad.glb"></a-asset-item>
+            <a-asset-item id="peca" src="armodels/17_shad.glb"></a-asset-item>
           </a-assets>
       
 
          
           <a-marker type="pattern" url="markers/pattern-viseu/pattern-viseu.patt"  smooth="true">
-           <a-entity  gltf-model="#peca17"   scale="2 2 2"  ></a-entity>
+           <a-gltf-model src="#peca" scale="1.5 1.5 1.5"></a-gltf-model>
           </a-marker>
         
  
